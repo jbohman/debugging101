@@ -286,9 +286,35 @@ program.
 
 \section{Models}
 
-\subsection{Test-driven}
+\subsection{Test-driven development}
+
+The idea behind test-driven programming is that you write the tests before you
+begin working on the implementation, that way you know what to expect from your
+program. Test-driven programming does also give you a clear specification of
+what the program is supposed to do, which most likely will make development
+much more comprehensive.
+
 
 \subsection{Contract programming}
+
+Contract programing has a simple core idea, make contracts in the program. In
+other words, make sure that certain conditions are met throughout the execution
+of the program.
+
+The most strict way of achieving this is to stop the program if any of the
+conditions are not met. This could be done with assert (in C/C++) and
+equivalents in most programming languages, for example:
+
+% FIXME
+$assert(x == 4711);$
+
+Another less destructive way to handle unexpected behaviour is with exceptions.
+Exceptions are thrown when unwanted behaviour appears. This is a way of
+signaling that an error has occurred, but letting some other part of the
+program handle it and determine what to do. It might be so that we want to halt
+the execution, as with assert, but we might also only want to log it, or
+completely ignore it. This way, exceptions give us much more freedom than using
+asserts.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
