@@ -99,8 +99,8 @@ are listed below.
 \subsection{Documenting tests using a test matrix}
 
 You should always document your tests, in order to be able to look back and see
-what you tested and did not test before, and what happened if you ran the
-program in that specific way. A test matrix is a good way to implement the
+what you did and did not test before, and what happened if you ran the
+program in that specific way. A test matrix is a good way to easily implement the
 fundamental ideas of documented testing. It contains a collection of tests, and
 for each test we list four points:
 
@@ -111,7 +111,8 @@ for each test we list four points:
     \item The results from the program - what result did we get?
 \end{itemize}
 
-Following this principle, a matrix is formed as we fill it up with rows, for example:
+Following this principle, a matrix is formed as we fill it up with rows, for
+example:
 
 \begin{center}
 \begin{tabular}{|l|p{2.5cm}|p{2cm}|p{2.5cm}|p{2.5cm}|}
@@ -125,16 +126,16 @@ The system crashed and burned. \\
 \end{center}
 
 This is a comprehensive way to document your testing. As the matrix fills up,
-more knowledge is gained about the program’s functionality, and actions can be
-taken thereafter. Documenting your tests in a similar manner is strongly
+more knowledge is gained about the program's functionality, and actions can be
+taken thereafter. Documenting your tests like this is strongly
 advisable.
  
 
 \subsection{State-based testing}
 
-This is a way of testing the program using abstract states and state
+State-based testing is a way of testing the program using abstract states and state
 transitions. First, define different states in the program. Then define
-transitions between these states. Transitions are caused by program events. The
+transitions between those states. Transitions are caused by program events. The
 goal is to confirm that the program changes state properly. Given a starting
 state (e.g. specific program input), we want to make sure that the transition
 (e.g. a calculation) takes us to the correct final state (e.g. outputting the
@@ -216,7 +217,7 @@ them right away and can correct them fast. In some programming languages, some
 logical errors will transform into compile errors, due to strong typing in that
 particular language. 
 
-\subsubsection{Warnings}
+\subsubsection{Compile warnings}
 
 Compile time warnings generally do not stop the compiling process, but they are
 usually good to take care of. It might be that you get warnings which are
@@ -248,28 +249,27 @@ suitable for both run time errors and logical errors.
 
 \subsubsection{Compiler debug flag}
 
-With certain compilers, for example gcc and g++\footnote{http://gcc.gnu.org}
-for the programing languages C and C++ respectively, the debugging flag changes
-the memory structure of the program. When the debug flag is active the compiler
-adds padding around variables in order to find out if something goes wrong
-during debugging. By changing the memory structure you might alter the
-behaviour of the program, as it is gentler to overflows and similar errors.
-Even if the program runs fine with the debug flag it might crash without it.
-Another problem with the debug flag is that it makes it easier for others to
-reverse-engineer the program. The reason is that the debug flag incorporates
-more information about the program itself into the binary. Because of these
-difficulties it is important to test both with and without the debug flag
-active.
+For some compilers, for example gcc and g++\footnote{http://gcc.gnu.org}, the
+debugging flag changes the memory structure of the program. When the debug flag
+is active the compiler adds padding around variables and arrays in order to
+find out if something goes wrong during execution. By changing the memory
+structure you might alter the behaviour of the program, as it is gentler to
+overflows and similar errors.  Even if the program runs fine with the debug
+flag it might crash without it.  Another problem with the debug flag is that it
+makes it easier for others to reverse-engineer the program. The reason is that
+the debug flag incorporates more information about the program itself into the
+binary. Because of these difficulties it is important to test both with and
+without the debug flag active.
 
 \subsubsection{Trace output}
 
 Printing information about the state of the program to the screen is a
 powerful, yet simple way of debugging. The concept is usually referred to as
-trace output. A trace output should always contain two parts to be useful,
+trace outputs. A trace output should always contain two parts to be useful,
 location and state. Location should clearly and unambiguously specify where in
 the program the output is generated. State describes the current state of the
 program at that location. A state is almost always described in terms of
-variables, a name and a value. An example of trace output:
+variable names and values. An example of trace output:
 
 \begin{quote}
 \begin{verbatim}
@@ -291,11 +291,12 @@ printf("foo(): bar=%d, a=%d", bar, a);
 
 Logging is an extension of trace output. Logging is a good way of handling a
 lot of output. Usually logging happens at several levels, for example
-{\em INFO}, {\em WARNING} and {\em ERROR}. The logging levels are supposed to
-describe the output generated. It might be so that it is only interesting to
-know about errors in the code, in which case the {\em ERROR} level might suffice. If
-you would like to trace the program execution you might want more verbose
-output, in which case {\em INFO} probably is the right choice. 
+\textsc{INFO}, \textsc{WARNING} and \textsc{ERROR}. The logging levels are
+supposed to describe the output generated. It might be so that it is only
+interesting to know about errors in the code, in which case the \textsc{ERROR}
+level might suffice. If you would like to trace the program execution you might
+want more verbose output, in which case \textsc{INFO} probably is the right
+choice. 
 
 It is also common practice to direct logging output to files, in order to
 review them later on. This also helps if there is a lot of output, as it would
