@@ -176,7 +176,28 @@ confirm that it does what is expected from it.
 
 \subsection{Automated testing}
 
+Running tests by hand can be a tiresome activity and usually also bad practice,
+therefore you would want to automate it. If you have input data and reference
+output data you could compare the program output with the reference output
+data. Comparing the files can be done automatically, for example using diff:
+
+\begin{quote}
+\begin{verbatim}
+$ program < input > result
+$ diff result reference.output 
+\end{verbatim}
+\end{quote}
+
+Remember that it is always a good idea to save all tests you have previously
+performed. As the test suite grows, a script or similar automatic mechanism
+should be used to run the test harness. 
+
 \subsubsection{Unit testing}
+
+Unit testing is a type of testing that is always automated. The goal of unit
+testing is to test every unit of code. A unit is a measure of the smallest part
+of code that can be tested in your program. Libraries for unit testing is
+available in almost any programming language and platform.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
