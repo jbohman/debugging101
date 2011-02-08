@@ -1,0 +1,167 @@
+%
+% DO NOT CHANGE THIS TEMPLATE!
+%
+% To allow combining the lecture notes from different scribes in a
+% simple way all scribes must use the same header.
+%
+% If you think the template lack a package, then contact the lecturer,
+% and we will probably extend the template with your favorite package.
+%
+
+\documentclass[11pt,a4paper,twoside]{article}
+\usepackage{alg}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\begin{document}
+\pagestyle{myheadings}
+\thispagestyle{plain}
+
+\newcommand{\lecture}[5] { %
+\newcommand{\fdatum}{#1}%
+\newcommand{\fnummer}{#2}%
+\newcommand{\frubrik}{#3}%
+\newcommand{\fforelasare}{#4}%
+\newcommand{\fskribent}{#5}%
+\markboth{DD2458 -- Popup VT 2011}{\frubrik}%
+\hrule
+\begin{center}
+\large \bf 
+DD2458, Problem Solving and Programming Under Pressure
+
+\vspace*{2mm}
+\Large \bf 
+Lecture \fnummer: \frubrik
+\end{center}
+\small
+\noindent Date: \fdatum
+\\
+Scribe(s): \fskribent
+\\
+Lecturer: \fforelasare
+\\
+\hrule
+\vspace{5mm}
+}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{definition}[theorem]{Definition}
+
+% \lecture{date}{lecture number}{lecture headline}{lecturer}{scribe}
+%
+%
+%
+
+%%%%% Edit after this row. The above should not need editing. %%%%%
+
+%%%%% Define your own stuff here. %%%%%
+
+\newcommand{\zed}{\mathbb{Z}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\GF}[1]{\mathrm{GF}_{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\lecture{2011-02-01}{3}{The Hitchhiker's Guide to Debugging and Testing}{Alexander Baltatzis}{Joel Bohman, Linus Wallgren, Oskar Werkelin Ahlin}
+
+\noindent
+Debugging is the art of finding bugs in code and to be able to get rid of them.
+Nowadays, this art has become a serious profession for many programmers, who
+spend their working days hunting bugs. The first step in learning about
+debugging is to know about one of the most well-know bugs in history. In 1946,
+at Harvard University, a moth caused a system failure by being trapped inside a
+relay in one of the electromechanical computers used at the time. Even though
+it is not common nowadays that program bugs are caused by actual insects, their
+source is still often evasive and hard to detect. This is a short guide for
+anyone interested in learning more about debugging and testing.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Testing}
+
+Testing the code you have written is of great importance. It is the way you
+confirm that your program runs the way you expect it to. Having a well tested
+program means that you can be sure the program will not behave unexpectedly.
+There are a number of testing techniques available and the most important ones
+are listed below.
+
+
+\subsection{Documenting tests using a test matrix}
+
+\begin{center}
+\begin{tabular}{|l|p{2.5cm}|p{2cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+Test \# & Prerequisites & The test & Expected result & Test results \\ \hline 1
+& Compiled with g++ -O2 -g on an Intel x86-64 architecture, debian stable. &
+Provoke the program to divide by zero. & An error mentioning divide by zero. &
+The system crashed and burned. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{State-based testing}
+
+\subsubsection{Boundary values}
+
+\subsubsection{Well defined behaviour}
+
+\subsection{Behavioural testing}
+
+\subsection{Testing manually}
+
+\subsection{Automated testing}
+
+\subsubsection{Unit testing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{When an error occurs}
+
+\subsection{Errors}
+
+\subsubsection{Run time errors}
+
+\subsubsection{Logical errors}
+
+\subsubsection{Compile errors}
+
+\subsubsection{Warnings}
+
+\subsection{Debugging}
+
+\subsubsection{Trace output}
+
+\subsubsection{Logging}
+
+\subsection{Tools}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Models}
+
+\subsection{Test-driven}
+
+\subsection{Contract programming}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{If you get stuck}
+
+\end{document}
