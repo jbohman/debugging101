@@ -248,8 +248,37 @@ It is also common practice to direct logging output to files, in order to
 review them later on. This also helps if there is a lot of output, as it would
 be to much to go through live as the execution happens.
 
-\subsection{Tools}
+\subsection{Debugging tools}
 
+There are many tools that you can use in order to master the art of debugging.
+If you are a command-line oriented person your tool belt should at the very
+least contain the debugger’s gdb \footnote{http://www.gnu.org/software/gdb/}
+and valgrind \footnote{http://valgrind.org/}, a source editor like vim and the
+GNU compiler family. If you are more of a graphical user interface person you
+could use a full-fledged integrated development environment (IDE). An IDE is
+basically a combination of a source editor, debugger and compiler. A couple of
+examples includes:
+
+\begin{itemize}
+\item Visual Studio - Windows
+\item Eclipse - Cross-platform
+\item XCode - Mac OS X
+\item Netbeans - Cross-platform
+\item Codeblocks - Cross-platform
+\end{itemize}
+
+
+It should be mentioned that there is always a good idea to know the
+command-line tools as you can not always be sure to have access to a graphical
+user interface when you are debugging.  
+
+\subsubsection{Debugging using breakpoints}
+
+Most IDEs support debugging using so called breakpoints. A breakpoint is a mark
+that you put in your code, telling the IDE to halt execution when it gets to
+that line of code. Then, you can calmly step through each line of code after
+that, and see how the program state changes throughout the execution of the
+program.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
