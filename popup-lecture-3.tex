@@ -98,6 +98,21 @@ are listed below.
 
 \subsection{Documenting tests using a test matrix}
 
+You should always document your tests, in order to be able to look back and see
+what you tested and did not test before, and what happened if you ran the
+program in that specific way. A test matrix is a good way to implement the
+fundamental ideas of documented testing. It contains a collection of tests, and
+for each test we list four points:
+
+\begin{itemize}
+    \item Prerequisites - what are the conditions for running this test?
+    \item The test itself - what part of the program does it execute?
+    \item The expected result - what do we expect to achieve?
+    \item The results from the program - what result did we get?
+\end{itemize}
+
+Following this principle, a matrix is formed as we fill it up with rows, for example:
+
 \begin{center}
 \begin{tabular}{|l|p{2.5cm}|p{2cm}|p{2.5cm}|p{2.5cm}|}
 \hline
@@ -108,6 +123,12 @@ The system crashed and burned. \\
 \hline
 \end{tabular}
 \end{center}
+
+This is a comprehensive way to document your testing. As the matrix fills up,
+more knowledge is gained about the program’s functionality, and actions can be
+taken thereafter. Documenting your tests in a similar manner is strongly
+advisable.
+ 
 
 \subsection{State-based testing}
 
