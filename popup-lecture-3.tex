@@ -111,10 +111,11 @@ for each test we list four points:
     \item The results from the program - what result did we get?
 \end{itemize}
 
-Following this principle, a matrix is formed as we fill it up with rows, for
-example:
+\noindent{Following} this principle, a matrix is formed as we fill it up with
+rows, an example of a test matrix can be found in Table 1.
 
 \begin{center}
+\begin{table}[h!]
 \begin{tabular}{|l|p{2.5cm}|p{2cm}|p{2.5cm}|p{2.5cm}|}
 \hline
 Test \# & Prerequisites & The test & Expected result & Test results \\ \hline 1
@@ -123,9 +124,11 @@ Provoke the program to divide by zero. & An error mentioning divide by zero. &
 The system crashed and burned. \\
 \hline
 \end{tabular}
+\caption{An example of a test matrix.}
+\end{table}
 \end{center}
 
-This is a comprehensive way to document your testing. As the matrix fills up,
+\noindent{This} is a comprehensive way to document your testing. As the matrix fills up,
 more knowledge is gained about the program's functionality, and actions can be
 taken thereafter. Documenting your tests like this is strongly
 advisable.
@@ -320,12 +323,12 @@ foo(): bar=5, a=10
 \end{verbatim}
 \end{quote}
 
-The example could be be achieved with for instance printf, which is available
+\noindent{The} example could be be achieved with for instance printf, which is available
 in most languages. In C it might look like this:
 
 \begin{quote}
 \begin{verbatim}
-printf("foo(): bar=%d, a=%d", bar, a);
+printf("foo(): bar=%d, a=%d\n", bar, a);
 \end{verbatim}
 \end{quote}
 
@@ -365,7 +368,7 @@ examples includes:
 \end{itemize}
 
 
-It should be mentioned that there is always a good idea to know the
+\noindent{It} should be mentioned that there is always a good idea to know the
 command-line tools as you can not always be sure to have access to a graphical
 user interface when you are debugging.  
 
