@@ -132,6 +132,16 @@ advisable.
 
 \subsection{State-based testing}
 
+This is a way of testing the program using abstract states and state
+transitions. First, define different states in the program. Then define
+transitions between these states. Transitions are caused by program events. The
+goal is to confirm that the program changes state properly. Given a starting
+state (e.g. specific program input), we want to make sure that the transition
+(e.g. a calculation) takes us to the correct final state (e.g. outputting the
+correct result). A state is often closely related to the current values of the
+different program variables.
+ 
+
 \subsubsection{Boundary values}
 
 \subsubsection{Well defined behaviour}
