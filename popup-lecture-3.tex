@@ -98,6 +98,21 @@ are listed below.
 
 \subsection{Documenting tests using a test matrix}
 
+You should always document your tests, in order to be able to look back and see
+what you tested and did not test before, and what happened if you ran the
+program in that specific way. A test matrix is a good way to implement the
+fundamental ideas of documented testing. It contains a collection of tests, and
+for each test we list four points:
+
+\begin{itemize}
+    \item Prerequisites - what are the conditions for running this test?
+    \item The test itself - what part of the program does it execute?
+    \item The expected result - what do we expect to achieve?
+    \item The results from the program - what result did we get?
+\end{itemize}
+
+Following this principle, a matrix is formed as we fill it up with rows, for example:
+
 \begin{center}
 \begin{tabular}{|l|p{2.5cm}|p{2cm}|p{2.5cm}|p{2.5cm}|}
 \hline
@@ -108,6 +123,12 @@ The system crashed and burned. \\
 \hline
 \end{tabular}
 \end{center}
+
+This is a comprehensive way to document your testing. As the matrix fills up,
+more knowledge is gained about the program’s functionality, and actions can be
+taken thereafter. Documenting your tests in a similar manner is strongly
+advisable.
+ 
 
 \subsection{State-based testing}
 
@@ -235,5 +256,31 @@ be to much to go through live as the execution happens.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{If you get stuck}
+
+If you managed to read this far you are now most certainly ready start your
+quest to perfect the art of debugging. Because hunting bugs can be a tiresome
+activity that can make the most sane person insane, you need a couple of tips
+to carry with you. If you find yourself in the situation where you are stuck
+and all hope seems gone, try one of the following: 
+
+\begin{itemize} 
+    \item Do something else! A fresh mind and body can do miracles. Take a walk.
+          Have something to eat. Sleep on it. 
+    \item Try to explain the problem to another person. By explaining your 
+          problem in words it will get you to think about the problem and you 
+          might see it from a new perspective.  
+    \begin{itemize}
+        \item If this does not help, show that person or any other person
+              your code. Another pair of eyes can see something you might have 
+              missed. This is called peer-reviewing.
+    \end{itemize}
+    
+    \item Start from the beginning. Understanding the logic to solve an 
+          assignment is what a programmer spend most time doing. When you have
+          the logic down you can write code in a higher pace. Chances are you
+          will not hit the same problem the second time around. Refactoring your
+          code is often faster than trying to figure out what was wrong with 
+          your first version.
+\end{itemize}
 
 \end{document}
