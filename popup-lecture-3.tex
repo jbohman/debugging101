@@ -131,13 +131,40 @@ The system crashed and burned. \\
 
 \subsection{Errors}
 
+\subsubsection{Compile errors}
+
+This is an error that you receive when you compile your code. The compiler
+stops and tells you there is an error that must be fixed before it can be
+compiled. Compile time errors are the most preferable errors, as you notice
+them right away and can correct them fast. In some programming languages, some
+logical errors will transform into compile errors, due to strong typing in that
+particular language. 
+
+\subsubsection{Warnings}
+
+Compile time warnings generally don’t stop the compiling process, but they are
+usually good to take care of. It might be that you get warnings which are
+unavoidable, for example warnings about deprecated methods. If a large amount
+of these are generated at compile time, more serious warnings might be
+overlooked, because of the sheer amount of warnings. If you get warnings that
+you know won’t do any harm, it is advisable to use compiler flags to hide
+these. In gcc, this can be done using the -W flag.
+
 \subsubsection{Run time errors}
+
+A run time error occurs after compilation and during the execution of the
+program. Run time errors are programming errors not detectable by the compiler,
+making them hard to detect and remove. An example of a typical run time error
+is when you try to access an array element outside of the array boundaries or
+when you try to follow a null pointer.
 
 \subsubsection{Logical errors}
 
-\subsubsection{Compile errors}
+Logical errors are the most difficult kinds of errors. They are especially
+difficult to detect as there is nothing technically wrong. The error is only in
+the behaviour of the program. As these are the most difficult errors to handle
+we need to employ a couple of debugging techniques.
 
-\subsubsection{Warnings}
 
 \subsection{Debugging}
 
