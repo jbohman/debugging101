@@ -169,7 +169,21 @@ confirm that it does what is expected from it.
     \end{itemize}
 \end{itemize}
 
-\subsubsection{Well defined behaviour}
+\subsubsection{Program behaviour}
+
+It is always preferred to have a program with a well defined behaviour, even
+though the input is invalid. Having a program with undefined behaviour can be
+risky and should be avoided. Testing this can be done by using random values as
+input, which is most likely guaranteed to not confide with the original program
+specifications.
+
+You are advised to check all code you have written and make sure it works. Even
+though a part of the program is not currently used, it might be in the future.
+For example, it is a good idea to have a working copy-constructor for future
+use. The copy-constructor is a good example of a place where unforeseen
+side-effects might arise. Such things should be tested, because even though
+those side-effects seem harmless, the program might crash once the side-effect
+arises in combination with another program functionality.
 
 \subsection{Behavioural testing}
 
