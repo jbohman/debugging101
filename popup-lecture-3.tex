@@ -132,6 +132,16 @@ advisable.
 
 \subsection{State-based testing}
 
+This is a way of testing the program using abstract states and state
+transitions. First, define different states in the program. Then define
+transitions between these states. Transitions are caused by program events. The
+goal is to confirm that the program changes state properly. Given a starting
+state (e.g. specific program input), we want to make sure that the transition
+(e.g. a calculation) takes us to the correct final state (e.g. outputting the
+correct result). A state is often closely related to the current values of the
+different program variables.
+ 
+
 \subsubsection{Boundary values}
 
 \subsubsection{Well defined behaviour}
@@ -163,12 +173,12 @@ particular language.
 
 \subsubsection{Warnings}
 
-Compile time warnings generally don’t stop the compiling process, but they are
+Compile time warnings generally do not stop the compiling process, but they are
 usually good to take care of. It might be that you get warnings which are
 unavoidable, for example warnings about deprecated methods. If a large amount
 of these are generated at compile time, more serious warnings might be
 overlooked, because of the sheer amount of warnings. If you get warnings that
-you know won’t do any harm, it is advisable to use compiler flags to hide
+you know will nott do any harm, it is advisable to use compiler flags to hide
 these. In gcc, this can be done using the -W flag.
 
 \subsubsection{Run time errors}
