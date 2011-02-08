@@ -144,6 +144,30 @@ different program variables.
 
 \subsubsection{Boundary values}
 
+Boundary value errors and off-by-one errors are errors that occur at the edges
+of input. The program might run as expected for most input, but when given
+certain values, a bug occurs. If your program should accept input in a certain
+range, it is usually a good idea to test both edges of that range. There are a
+couple of common boundary values that one should test the program for, to
+confirm that it does what is expected from it.
+
+\begin{itemize}
+    \item Lower bounds:
+    \begin{itemize}
+        \item 0, -1 and 1.
+        \item The empty string, ""
+        \item Empty list, []
+        \item NULL or equivalent.
+    \end{itemize}
+    \item Upper bounds:
+    \begin {itemize}
+        \item Signed integer: $2^{31}-1$, $2^{31}$.
+        \item Unsigned integer: $2^{32}-1$, $2^{32}$.
+        \item A string of maximum accepted length.
+        \item A list of maximum accepted size.
+    \end{itemize}
+\end{itemize}
+
 \subsubsection{Well defined behaviour}
 
 \subsection{Behavioural testing}
