@@ -250,13 +250,21 @@ the program the output is generated. State describes the current state of the
 program at that location. A state is almost always described in terms of
 variables, a name and a value. An example of trace output:
 
-% TODO Kolla så det här blir bra
-$foo(): bar=5, a=10$
+\begin{quote}
+\begin{verbatim}
+foo(): bar=5, a=10
+\end{verbatim}
+\end{quote}
 
 The example could be be achieved with for instance printf, which is available
 in most languages. In C it might look like this:
 
-$printf(“foo(): bar=\%d, a=\%d”, bar, a);$
+\begin{quote}
+\begin{verbatim}
+printf("foo(): bar=%d, a=%d", bar, a);
+\end{verbatim}
+\end{quote}
+
 
 \subsubsection{Logging}
 
@@ -276,7 +284,7 @@ be to much to go through live as the execution happens.
 
 There are many tools that you can use in order to master the art of debugging.
 If you are a command-line oriented person your tool belt should at the very
-least contain the debugger’s gdb \footnote{http://www.gnu.org/software/gdb/}
+least contain the debugger's gdb \footnote{http://www.gnu.org/software/gdb/}
 and valgrind \footnote{http://valgrind.org/}, a source editor like vim and the
 GNU compiler family. If you are more of a graphical user interface person you
 could use a full-fledged integrated development environment (IDE). An IDE is
@@ -329,8 +337,11 @@ The most strict way of achieving this is to stop the program if any of the
 conditions are not met. This could be done with assert (in C/C++) and
 equivalents in most programming languages, for example:
 
-% FIXME
-$assert(x == 4711);$
+\begin{quote}
+\begin{verbatim}
+assert(x == 4711);
+\end{verbatim}
+\end{quote}
 
 Another less destructive way to handle unexpected behaviour is with exceptions.
 Exceptions are thrown when unwanted behaviour appears. This is a way of
