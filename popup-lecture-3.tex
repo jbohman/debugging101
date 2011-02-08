@@ -185,9 +185,38 @@ side-effects might arise. Such things should be tested, because even though
 those side-effects seem harmless, the program might crash once the side-effect
 arises in combination with another program functionality.
 
+
 \subsection{Behavioural testing}
 
+Behavioural testing is a more general testing method than state-based testing.
+Instead of looking at states in code, behavioural testing focuses on the
+functionally of a chunk of code, ignoring the internal states. An example could
+be a breadth-first search, in behavioural testing we look at the result of the
+breadth-first search compared to program input, and not the internal states of
+each stage of the search. Behavioural testing is vital when developing
+graphical user interfaces, to make sure that internal states match what is
+displayed on the screen.
+
+
 \subsection{Testing manually}
+
+Manual testing is a widely employed technique and it is almost guaranteed to be
+used by any developer. When doing manual testing the developer or a another
+person takes the role of the end user and gives the program input to see that
+it produces an acceptable result. This is related to behavioural testing but
+instead of looking at the code you only look at the program and the program
+functionality.
+
+Manual testing is almost always a bad idea if the developer is the only person
+doing it. A developer most certainly have preconceptions of his or hers code
+which might lead to not all functionality is equal tested. Manual testing is
+also hard to reproduce, to help with that a test script could be written to
+tell the person acting as the end user to test different functions of the
+program. But the biggest problem with manual testing is regression. If a manual
+test find a bug and it is fixed, how can the developer make sure that the fix
+did not break earlier manual tests? The only way is to run those tests again,
+and now you enter a declining spiral.
+
 
 \subsection{Automated testing}
 
