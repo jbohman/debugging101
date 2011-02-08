@@ -205,6 +205,18 @@ $printf(“foo(): bar=\%d, a=\%d”, bar, a);$
 
 \subsubsection{Logging}
 
+Logging is an extension of trace output. Logging is a good way of handling a
+lot of output. Usually logging happens at several levels, for example
+{\em INFO}, {\em WARNING} and {\em ERROR}. The logging levels are supposed to
+describe the output generated. It might be so that it is only interesting to
+know about errors in the code, in which case the {\em ERROR} level might suffice. If
+you would like to trace the program execution you might want more verbose
+output, in which case {\em INFO} probably is the right choice. 
+
+It is also common practice to direct logging output to files, in order to
+review them later on. This also helps if there is a lot of output, as it would
+be to much to go through live as the execution happens.
+
 \subsection{Tools}
 
 
