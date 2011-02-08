@@ -165,10 +165,43 @@ difficult to detect as there is nothing technically wrong. The error is only in
 the behaviour of the program. As these are the most difficult errors to handle
 we need to employ a couple of debugging techniques.
 
-
 \subsection{Debugging}
 
+Debugging is the art of localizing a bug and then finding the fix. Debugging is
+suitable for both run time errors and logical errors. 
+
+\subsubsection{Compiler debug flag}
+
+With certain compilers, for example gcc and g++\footnote{http://gcc.gnu.org}
+for the programing languages C and C++ respectively, the debugging flag changes
+the memory structure of the program. When the debug flag is active the compiler
+adds padding around variables in order to find out if something goes wrong
+during debugging. By changing the memory structure you might alter the
+behaviour of the program, as it is gentler to overflows and similar errors.
+Even if the program runs fine with the debug flag it might crash without it.
+Another problem with the debug flag is that it makes it easier for others to
+reverse-engineer the program. The reason is that the debug flag incorporates
+more information about the program itself into the binary. Because of these
+difficulties it is important to test both with and without the debug flag
+active.
+
 \subsubsection{Trace output}
+
+Printing information about the state of the program to the screen is a
+powerful, yet simple way of debugging. The concept is usually referred to as
+trace output. A trace output should always contain two parts to be useful,
+location and state. Location should clearly and unambiguously specify where in
+the program the output is generated. State describes the current state of the
+program at that location. A state is almost always described in terms of
+variables, a name and a value. An example of trace output:
+
+% TODO Kolla så det här blir bra
+$foo(): bar=5, a=10$
+
+The example could be be achieved with for instance printf, which is available
+in most languages. In C it might look like this:
+
+$printf(“foo(): bar=\%d, a=\%d”, bar, a);$
 
 \subsubsection{Logging}
 
