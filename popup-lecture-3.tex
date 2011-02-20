@@ -338,7 +338,9 @@ printf("foo(): bar=%d, a=%d\n", bar, a);
 \subsubsection{Logging}
 
 Logging is an extension of trace output. Logging is a good way of handling a
-lot of output. Usually logging happens at several levels, for example
+lot of output. Daemons and other programs without a terminal or other interface
+especially benifit from the use of loggin, as its about the only way they can
+output information. Usually logging happens at several levels, for example
 \textsc{INFO}, \textsc{WARNING} and \textsc{ERROR}. The logging levels are
 supposed to describe the output generated. It might be so that it is only
 interesting to know about errors in the code, in which case the \textsc{ERROR}
