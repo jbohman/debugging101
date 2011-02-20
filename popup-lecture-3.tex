@@ -204,27 +204,26 @@ displayed on the screen.
 \subsection{Testing manually}
 
 Manual testing is a widely employed technique and it is almost guaranteed to be
-used by any developer. When doing manual testing the developer or a another
+used by any developer. When doing manual testing the developer or another
 person takes the role of the end user and gives the program input to see that
 it produces an acceptable result. This is related to behavioural testing but
 instead of looking at the code you only look at the program and the program
 functionality.
 
 Manual testing is almost always a bad idea if the developer is the only person
-doing it. A developer most certainly have preconceptions of his or hers code
+doing it. A developer most certainly has preconceptions of his or her code
 which might lead to not all functionality is equal tested. Manual testing is
 also hard to reproduce, to help with that a test script could be written to
 tell the person acting as the end user to test different functions of the
 program. But the biggest problem with manual testing is regression. If a manual
-test find a bug and it is fixed, how can the developer make sure that the fix
-did not break earlier manual tests? The only way is to run those tests again,
-and now you enter a declining spiral.
-
+test find a bug and the developer fix the bug, how can he be sure that the fix
+did not break earlier fixes or introduce a new bug? It is a big problem if
+only manual testing is employed because old tests are not saved.
 
 \subsection{Automated testing}
 
-Running tests by hand can be a tiresome activity and usually also bad practice,
-therefore you would want to automate it. If you have input data and reference
+Running tests by hand can be a tiresome activity and usually also bad practice.
+Therefore you would want to automate it. If you have input data and reference
 output data you could compare the program output with the reference output
 data. Comparing the files can be done automatically, for example using diff:
 
@@ -243,8 +242,8 @@ should be used to run the test harness.
 
 Unit testing is a type of testing that is always automated. The goal of unit
 testing is to test every unit of code. A unit is a measure of the smallest part
-of code that can be tested in your program. Libraries for unit testing is
-available in almost any programming language and platform.
+of code that can be tested in your program. Libraries for unit testing are
+available in almost any programming language and on almost any platform.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -270,7 +269,7 @@ usually good to take care of. It might be that you get warnings which are
 unavoidable, for example warnings about deprecated methods. If a large amount
 of these are generated at compile time, more serious warnings might be
 overlooked, because of the sheer amount of warnings. If you get warnings that
-you know will nott do any harm, it is advisable to use compiler flags to hide
+you know will not do any harm, it is advisable to use compiler flags to hide
 these. In gcc, this can be done using the -W flag.
 
 \subsubsection{Run time errors}
@@ -368,7 +367,7 @@ examples includes:
 \end{itemize}
 
 
-\noindent{It} should be mentioned that there is always a good idea to know the
+\noindent{It} should be mentioned that it is always a good idea to know the
 command-line tools as you can not always be sure to have access to a graphical
 user interface when you are debugging.  
 
@@ -390,7 +389,7 @@ program.
 
 The idea behind test-driven programming is that you write the tests before you
 begin working on the implementation, that way you know what to expect from your
-program. Test-driven programming does also give you a clear specification of
+program. Test-driven programming also gives you a clear specification of
 what the program is supposed to do, which most likely will make development
 much more comprehensive.
 
@@ -414,7 +413,7 @@ assert(x == 4711);
 \noindent{Another} less destructive way to handle unexpected behaviour is with exceptions.
 Exceptions are thrown when unwanted behaviour appears. This is a way of
 signaling that an error has occurred, but letting some other part of the
-program handle it and determine what to do. It might be so that we want to halt
+program handle it and determine what to do. It might be that we want to halt
 the execution, as with assert, but we might also only want to log it, or
 completely ignore it. This way, exceptions give us much more freedom than using
 asserts.
@@ -444,8 +443,8 @@ and all hope seems gone, try one of the following:
     \end{itemize}
     
     \item Start from the beginning. Understanding the logic to solve an 
-          assignment is what a programmer spend most time doing. When you have
-          the logic down you can write code in a higher pace. Chances are you
+          assignment is what a programmer spends most time doing. When you have
+          the logic down you can write code at a higher pace. Chances are you
           will not hit the same problem the second time around. Refactoring your
           code is often faster than trying to figure out what was wrong with 
           your first version.
