@@ -310,6 +310,7 @@ the debug flag incorporates more information about the program itself into the
 binary. Because of these difficulties it is important to test both with and
 without the debug flag active.
 
+
 \subsubsection{Trace output}
 
 Printing information about the state of the program to the screen is a
@@ -319,14 +320,6 @@ location and state. Location should clearly and unambiguously specify where in
 the program the output is generated. State describes the current state of the
 program at that location. A state is almost always described in terms of
 variable names and values. An example of trace output:
-
-\subsubsection{Binary search the code}
-If the program is divided into specific parts, and the program has an error,
- you can find out where the error is located by running different parts of the 
- program at a time. Start by commenting out half of the program, if the 
- error is gone remove half of those comments and see if it is still gone. Keep
- doing this until you have located the error successfully. If you do not know 
- where an error is located, this can in many cases be a good way of finding it.
 
 \begin{quote}
 \begin{verbatim}
@@ -342,6 +335,15 @@ in most languages. In C it might look like this:
 printf("foo(): bar=%d, a=%d\n", bar, a);
 \end{verbatim}
 \end{quote}
+
+
+\subsubsection{Binary search the code}
+If the program is divided into specific parts, and the program has an error,
+ you can find out where the error is located by running different parts of the 
+ program at a time. Start by commenting out half of the program, if the 
+ error is gone remove half of those comments and see if it is still gone. Keep
+ doing this until you have located the error successfully. If you do not know 
+ where an error is located, this can in many cases be a good way of finding it.
 
 
 \subsubsection{Logging}
