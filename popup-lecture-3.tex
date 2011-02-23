@@ -176,6 +176,11 @@ confirm that it does what is expected from it.
     \end{itemize}
 \end{itemize}
 
+The reader should note that an error can occur from a combination of these
+boundary values, not only when a single variable in a state assume a boundary
+value.
+
+
 \subsubsection{Program behaviour}
 
 It is always preferred to have a program with a well defined behaviour, even
@@ -336,6 +341,14 @@ printf("foo(): bar=%d, a=%d\n", bar, a);
 \end{verbatim}
 \end{quote}
 
+\noindent{And} it is very similar in Java:
+
+\begin{quote}
+\begin{verbatim}
+System.out.printf("foo(): bar=%d, a=%d\n", bar, a);
+\end{verbatim}
+\end{quote}
+
 
 \subsubsection{Binary search the code}
 If the program is divided into specific parts, and the program has an error,
@@ -373,11 +386,11 @@ basically a combination of a source editor, debugger and compiler. A couple of
 examples includes:
 
 \begin{itemize}
-\item Visual Studio - Windows
-\item Eclipse - Cross-platform
-\item XCode - Mac OS X
-\item Netbeans - Cross-platform
-\item Codeblocks - Cross-platform
+\item \textbf{Visual Studio} Windows
+\item \textbf{Eclipse} Cross-platform
+\item \textbf{XCode} Mac OS X
+\item \textbf{Netbeans} Cross-platform
+\item \textbf{Codeblocks} Cross-platform
 \end{itemize}
 
 
@@ -454,7 +467,8 @@ usually expect.
 
 \section{Profiling your code}
 You have got your program running and giving correct output, but it is not fast
-enough. In order to be able to know which parts of the program that need to be
+enough. Or maybe the program uses too much memory. 
+In order to be able to know which parts of the program that need to be
 optimized, we usually use a profiler.  A profiler tracks the performance in
 different program parts during execution, and displays the result of this in a
 table after finished execution. This shows the programmer which methods or
@@ -463,13 +477,13 @@ functions are time bottle necks, and need to be optimized.
 \subsection{Popular profilers}
 There is many good profilers available, but here we list the most popular ones.
 \begin{itemize}
-    \item Gprof - the GNU Profiler. A popular profiler among Unix developer.
+    \item \textbf{Gprof} The GNU Profiler. A popular profiler among Unix developer.
     Works for any language supported by GCC (the GNU Compiler Collection).
 
-    \item Valgrind - A usefull tool for detecting memory leaks, but can also be
+    \item \textbf{Valgrind} A useful tool for detecting memory leaks, but can also be
     used for general memory debugging as well as profiling.
 
-    \item java -Xprof - Java's built-in profiler. Not very extensive, but very
+    \item \textbf{java -Xprof} Java's built-in profiler. Not very extensive, but very
     easy to use.  Simply run the java program with the -Xprof flag.
 
 \end{itemize}
