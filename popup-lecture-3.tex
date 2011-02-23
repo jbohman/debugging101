@@ -342,9 +342,8 @@ If the program is divided into specific parts, and the program has an error,
  you can find out where the error is located by running different parts of the 
  program at a time. Start by commenting out half of the program, if the 
  error is gone remove half of those comments and see if it is still gone. Keep
- doing this until you have located the error successfully. If you do not know 
- where an error is located, this can in many cases be a good way of finding it.
-
+ doing this until you have located the error successfully. This is often an efficient
+ way of locating errors.
 
 \subsubsection{Logging}
 
@@ -446,15 +445,16 @@ reduce the amount of work laid down by more than you usually expect.
 You have got your program running and giving correct output, but it is not fast enough. In order 
 to be able to know which parts of the program that need to be optimized, we usually use a profiler. 
 A profiler tracks the performance in different program parts during execution, and displays the
-result of this in a table after finished execution. This shows the programmer which methods or functions 
- which need to be optimized.
-
-\subsection{Using a profiler}
-
+result of this in a table after finished execution. This shows the programmer which methods or functions are time bottle necks, and need to be optimized.
 
 \subsection{Popular profilers}
-
-
+There is many good profilers available, but here we list the most popular ones.
+\begin{itemize}
+    \item Gprof - the GNU Profiler. A popular profiler among Unix developer. Works for any 
+          language supported by GCC (the GNU Compiler Collection).
+    \item java -Xprof - Java's built-in profiler. Not very extensive, but very easy to use. 
+          Simply run the java program with the -Xprof flag.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
