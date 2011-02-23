@@ -176,7 +176,7 @@ confirm that it does what is expected from it.
     \end{itemize}
 \end{itemize}
 
-The reader should note that an error can occur from a combination of these
+\noindent{The} reader should note that an error can occur from a combination of these
 boundary values, not only when a single variable in a state assume a boundary
 value.
 
@@ -351,11 +351,11 @@ if (DEBUG) System.out.printf("foo(): bar=%d, a=%d\n", bar, a);
 \end{verbatim}
 \end{quote}
 
-As in the examples above, it is possible to define a DEBUG flag. Both gcc and
-the java compiler will completly ignore the code if the debug flag is off,
+\noindent{As} in the examples above, it is possible to define a DEBUG flag. Both gcc and
+the Java compiler will completely ignore the code if the debug flag is off,
 meaning there is no performance penalty. Another approach is to write to
-STDERR, which in java is defined as System.out, in C++ std::cerr and in C
-stderr, which can be utilized with fprintf().
+the standard error output stream, which in Java is defined as System.err, in C++ std::cerr and in C
+stderr.
 
 \subsubsection{Binary search the code}
 If the program is divided into specific parts, and the program has an error,
@@ -453,8 +453,7 @@ assert (x == 4711) : "x is 4711 in foo.bar()";
 \end{verbatim}
 \end{quote}
 
-\noindent{Another} 
-less destructive way to handle unexpected behaviour is with exceptions.
+\noindent{Another} less destructive way to handle unexpected behaviour is with exceptions.
 Exceptions are thrown when unwanted behaviour appears. This is a way of
 signaling that an error has occurred, but letting some other part of the
 program handle it and determine what to do. It might be that we want to halt
@@ -482,21 +481,27 @@ table after finished execution. This shows the programmer which methods or
 functions are time bottle necks, and need to be optimized.
 
 \subsection{Popular profilers}
-There is many good profilers available, but here we list the most popular ones.
+There is many good profilers available, but here we list some of the most popular ones.
 \begin{itemize}
-    \item \textbf{Gprof} 
-    The GNU Profiler. A popular profiler among Unix developer.  Works for any
+    \item \textbf{Gprof} \footnote{http://www.sourceware.org/binutils/docs-2.21/gprof/}
+    The GNU Profiler. A popular profiler among Linux/Unix developers.  Works for any
     language supported by GCC (the GNU Compiler Collection).
 
     \item \textbf{Valgrind} \footnote{http://valgrind.org/} 
     A useful tool for detecting memory leaks, but can also be used for general
     memory debugging as well as profiling.
 
+    \item \textbf{Hprof} \footnote{http://java.sun.com/developer/technicalArticles/Programming/HPROF.html}
+    Good command line profiling tool which comes with J2SE (Java 2 Platform Standard Edition).
+
     \item \textbf{java -Xprof} 
-    Java's built-in profiler. Not very extensive, but very easy to use.  Simply
+    Java's built-in profiler. Not very extensive, but very easy to use. Simply
     run the java program with the -Xprof flag.
 
 \end{itemize}
+
+\noindent{Many} IDEs come with a built-in profiler, like Visual Studio and NetBeans.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -535,9 +540,9 @@ and all hope seems gone, try one of the following:
 
     \item 
         Refactor the code, even though your code always should be nicely
-        formated its a good idea to go through it again. Refactoring and adding
+        formatted its a good idea to go through it again. Refactoring and adding
         comments helps you to go through the program flow, which might aid you
-        in finding bugs
+        in finding bugs.
     \item 
         Start from the beginning. Understanding the logic to solve an
         assignment is what a programmer spends most time doing. When you have
