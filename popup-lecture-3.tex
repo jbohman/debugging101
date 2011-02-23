@@ -176,6 +176,11 @@ confirm that it does what is expected from it.
     \end{itemize}
 \end{itemize}
 
+The reader should note that an error can occur from a combination of these
+boundary values, not only when a single variable in a state assume a boundary
+value.
+
+
 \subsubsection{Program behaviour}
 
 It is always preferred to have a program with a well defined behaviour, even
@@ -333,6 +338,14 @@ in most languages. In C it might look like this:
 \begin{quote}
 \begin{verbatim}
 printf("foo(): bar=%d, a=%d\n", bar, a);
+\end{verbatim}
+\end{quote}
+
+\noindent{And} it is very similar in Java:
+
+\begin{quote}
+\begin{verbatim}
+System.out.printf("foo(): bar=%d, a=%d\n", bar, a);
 \end{verbatim}
 \end{quote}
 
