@@ -424,7 +424,8 @@ assert(x == 4711);
 \end{verbatim}
 \end{quote}
 
-\noindent{Another} less destructive way to handle unexpected behaviour is with exceptions.
+\noindent{Another} 
+less destructive way to handle unexpected behaviour is with exceptions.
 Exceptions are thrown when unwanted behaviour appears. This is a way of
 signaling that an error has occurred, but letting some other part of the
 program handle it and determine what to do. It might be that we want to halt
@@ -433,27 +434,35 @@ completely ignore it. This way, exceptions give us much more freedom than using
 asserts.
 
 \subsection{Code structure}
-Always keep your code structured. This does not only reduce the chances of introducing 
-bugs, it also makes the debugging job much easier once a bug has been introduced. It can 
-reduce the amount of work laid down by more than you usually expect.
+Always keep your code structured. This does not only reduce the chances of
+introducing bugs, it also makes the debugging job much easier once a bug has
+been introduced. It can reduce the amount of work laid down by more than you
+usually expect.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Profiling your code}
-You have got your program running and giving correct output, but it is not fast enough. In order 
-to be able to know which parts of the program that need to be optimized, we usually use a profiler. 
-A profiler tracks the performance in different program parts during execution, and displays the
-result of this in a table after finished execution. This shows the programmer which methods or functions are time bottle necks, and need to be optimized.
+You have got your program running and giving correct output, but it is not fast
+enough. In order to be able to know which parts of the program that need to be
+optimized, we usually use a profiler.  A profiler tracks the performance in
+different program parts during execution, and displays the result of this in a
+table after finished execution. This shows the programmer which methods or
+functions are time bottle necks, and need to be optimized.
 
 \subsection{Popular profilers}
 There is many good profilers available, but here we list the most popular ones.
 \begin{itemize}
-    \item Gprof - the GNU Profiler. A popular profiler among Unix developer. Works for any 
-          language supported by GCC (the GNU Compiler Collection).
-    \item java -Xprof - Java's built-in profiler. Not very extensive, but very easy to use. 
-          Simply run the java program with the -Xprof flag.
+    \item Gprof - the GNU Profiler. A popular profiler among Unix developer.
+    Works for any language supported by GCC (the GNU Compiler Collection).
+
+    \item Valgrind - A usefull tool for detecting memory leaks, but can also be
+    used for general memory debugging as well as profiling.
+
+    \item java -Xprof - Java's built-in profiler. Not very extensive, but very
+    easy to use.  Simply run the java program with the -Xprof flag.
+
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
