@@ -99,8 +99,8 @@ are listed below.
 \subsection{Documenting tests using a test matrix}
 
 You should always document your tests, in order to be able to look back and see
-what you did and did not test before, and what happened if you ran the
-program in that specific way. A test matrix is a good way to easily implement the
+what you did and did not test before, and what happened if you ran the program
+in that specific way. A test matrix is a good way to easily implement the
 fundamental ideas of documented testing. It contains a collection of tests, and
 for each test we list four points:
 
@@ -128,16 +128,16 @@ The system crashed and burned. \\
 \end{table}
 \end{center}
 
-\noindent{This} is a comprehensive way to document your testing. As the matrix fills up,
-more knowledge is gained about the program's functionality, and actions can be
-taken thereafter. Documenting your tests like this is strongly
+\noindent{This} is a comprehensive way to document your testing. As the matrix
+fills up, more knowledge is gained about the program's functionality, and
+actions can be taken thereafter. Documenting your tests like this is strongly
 advisable.
  
 
 \subsection{State-based testing}
 
-State-based testing is a way of testing the program using abstract states and state
-transitions. First, define different states in the program. Then define
+State-based testing is a way of testing the program using abstract states and
+state transitions. First, define different states in the program. Then define
 transitions between those states. Transitions are caused by program events. The
 goal is to confirm that the program changes state properly. Given a starting
 state (e.g. specific program input), we want to make sure that the transition
@@ -176,9 +176,9 @@ confirm that it does what is expected from it.
     \end{itemize}
 \end{itemize}
 
-\noindent{The} reader should note that an error can occur from a combination of these
-boundary values, not only when a single variable in a state assume a boundary
-value.
+\noindent{The} reader should note that an error can occur from a combination of
+these boundary values, not only when a single variable in a state assume a
+boundary value.
 
 
 \subsubsection{Program behaviour}
@@ -225,8 +225,8 @@ also hard to reproduce, to help with that a test script could be written to
 tell the person acting as the end user to test different functions of the
 program. But the biggest problem with manual testing is regression. If a manual
 test find a bug and the developer fix the bug, how can he be sure that the fix
-did not break earlier fixes or introduce a new bug? It is a big problem if
-only manual testing is employed because old tests are not saved.
+did not break earlier fixes or introduce a new bug? It is a big problem if only
+manual testing is employed because old tests are not saved.
 
 \subsection{Automated testing}
 
@@ -242,9 +242,9 @@ $ diff result reference.output
 \end{verbatim}
 \end{quote}
 
-\noindent{Remember} that it is always a good idea to save all tests you have previously
-performed. As the test suite grows, a script or similar automatic mechanism
-should be used to run the test harness. 
+\noindent{Remember} that it is always a good idea to save all tests you have
+previously performed. As the test suite grows, a script or similar automatic
+mechanism should be used to run the test harness. 
 
 \subsubsection{Unit testing}
 
@@ -332,8 +332,8 @@ foo(): bar=5, a=10
 \end{verbatim}
 \end{quote}
 
-\noindent{The} example could be be achieved with for instance printf, which is available
-in most languages. In C it might look like this:
+\noindent{The} example could be be achieved with for instance printf, which is
+available in most languages. In C it might look like this:
 
 \begin{quote}
 \begin{verbatim}
@@ -351,19 +351,19 @@ if (DEBUG) System.out.printf("foo(): bar=%d, a=%d\n", bar, a);
 \end{verbatim}
 \end{quote}
 
-\noindent{As} in the examples above, it is possible to define a DEBUG flag. Both gcc and
-the Java compiler will completely ignore the code if the debug flag is off,
-meaning there is no performance penalty. Another approach is to write to
-the standard error output stream, which in Java is defined as System.err, in C++ std::cerr and in C
-stderr.
+\noindent{As} in the examples above, it is possible to define a DEBUG flag.
+Both gcc and the Java compiler will completely ignore the code if the debug
+flag is off, meaning there is no performance penalty. Another approach is to
+write to the standard error output stream, which in Java is defined as
+System.err, in C++ std::cerr and in C stderr.
 
 \subsubsection{Binary search the code}
 If the program is divided into specific parts, and the program has an error,
- you can find out where the error is located by running different parts of the 
- program at a time. Start by commenting out half of the program, if the 
- error is gone remove half of those comments and see if it is still gone. Keep
- doing this until you have located the error successfully. This is often an efficient
- way of locating errors.
+you can find out where the error is located by running different parts of the
+program at a time. Start by commenting out half of the program, if the error is
+gone remove half of those comments and see if it is still gone. Keep doing this
+until you have located the error successfully. This is often an efficient way
+of locating errors.
 
 \subsubsection{Logging}
 
@@ -385,10 +385,10 @@ be to much to go through live as the execution happens.
 
 There are many tools that you can use in order to master the art of debugging.
 If you are a command-line oriented person your tool belt should at the very
-least contain the debuggers gdb \footnote{http://www.gnu.org/software/gdb/}
-and valgrind \footnote{http://valgrind.org/}, a source editor like vim and the
-GNU compiler family. If you are more of a graphical user interface person you
-could use a full-fledged integrated development environment (IDE). An IDE is
+least contain the debuggers gdb \footnote{http://www.gnu.org/software/gdb/} and
+valgrind \footnote{http://valgrind.org/}, a source editor like vim and the GNU
+compiler family. If you are more of a graphical user interface person you could
+use a full-fledged integrated development environment (IDE). An IDE is
 basically a combination of a source editor, debugger and compiler. A couple of
 examples includes:
 
@@ -423,9 +423,9 @@ program.
 
 The idea behind test-driven programming is that you write the tests before you
 begin working on the implementation, that way you know what to expect from your
-program. Test-driven programming also gives you a clear specification of
-what the program is supposed to do, which most likely will make development
-much more comprehensive.
+program. Test-driven programming also gives you a clear specification of what
+the program is supposed to do, which most likely will make development much
+more comprehensive.
 
 
 \subsection{Contract programming}
@@ -444,7 +444,7 @@ assert(x == 4711);
 \end{verbatim}
 \end{quote}
 
-In java you can even display an error message when an assert fails, togheter
+In java you can even display an error message when an assert fails, together
 with the stacktrace.
 
 \begin{quote}
@@ -453,9 +453,9 @@ assert (x == 4711) : "x is 4711 in foo.bar()";
 \end{verbatim}
 \end{quote}
 
-\noindent{Another} less destructive way to handle unexpected behaviour is with exceptions.
-Exceptions are thrown when unwanted behaviour appears. This is a way of
-signaling that an error has occurred, but letting some other part of the
+\noindent{Another} less destructive way to handle unexpected behaviour is with
+exceptions.  Exceptions are thrown when unwanted behaviour appears. This is a
+way of signaling that an error has occurred, but letting some other part of the
 program handle it and determine what to do. It might be that we want to halt
 the execution, as with assert, but we might also only want to log it, or
 completely ignore it. This way, exceptions give us much more freedom than using
@@ -472,16 +472,18 @@ usually expect.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Profiling your code}
+
 You have got your program running and giving correct output, but it is not fast
-enough. Or maybe the program uses too much memory. 
-In order to be able to know which parts of the program that need to be
-optimized, we usually use a profiler.  A profiler tracks the performance in
-different program parts during execution, and displays the result of this in a
-table after finished execution. This shows the programmer which methods or
-functions are time bottle necks, and need to be optimized.
+enough. Or maybe the program uses too much memory. In order to be able to know
+which parts of the program that need to be optimized, we usually use a
+profiler.  A profiler tracks the performance in different program parts during
+execution, and displays the result of this in a table after finished execution.
+This shows the programmer which methods or functions are time bottle necks, and
+need to be optimized.
 
 \subsection{Popular profilers}
-There is many good profilers available, but here we list some of the most popular ones.
+There is many good profilers available, but here we list some of the most
+popular ones.
 \begin{itemize}
     \item \textbf{Gprof} \footnote{http://www.sourceware.org/binutils/docs-2.21/gprof/}
     The GNU Profiler. A popular profiler among Linux/Unix developers.  Works for any
@@ -540,9 +542,9 @@ and all hope seems gone, try one of the following:
 
     \item 
         Refactor the code, even though your code always should be nicely
-        formatted its a good idea to go through it again. Refactoring and adding
-        comments helps you to go through the program flow, which might aid you
-        in finding bugs.
+        formatted its a good idea to go through it again. Refactoring and
+        adding comments helps you to go through the program flow, which might
+        aid you in finding bugs.
     \item 
         Start from the beginning. Understanding the logic to solve an
         assignment is what a programmer spends most time doing. When you have
