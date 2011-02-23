@@ -424,6 +424,15 @@ assert(x == 4711);
 \end{verbatim}
 \end{quote}
 
+In java you can even display an error message when an assert fails, togheter
+with the stacktrace.
+
+\begin{quote}
+\begin{verbatim}
+assert (x == 4711) : "x is 4711 in foo.bar()";
+\end{verbatim}
+\end{quote}
+
 \noindent{Another} 
 less destructive way to handle unexpected behaviour is with exceptions.
 Exceptions are thrown when unwanted behaviour appears. This is a way of
