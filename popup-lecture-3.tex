@@ -337,7 +337,8 @@ in most languages. In C it might look like this:
 
 \begin{quote}
 \begin{verbatim}
-printf("foo(): bar=%d, a=%d\n", bar, a);
+#define DEBUG 1
+if (DEBUG) printf("foo(): bar=%d, a=%d\n", bar, a);
 \end{verbatim}
 \end{quote}
 
@@ -345,10 +346,16 @@ printf("foo(): bar=%d, a=%d\n", bar, a);
 
 \begin{quote}
 \begin{verbatim}
-System.out.printf("foo(): bar=%d, a=%d\n", bar, a);
+private final bool debug = true;
+if (DEBUG) System.out.printf("foo(): bar=%d, a=%d\n", bar, a);
 \end{verbatim}
 \end{quote}
 
+As in the examples above, it is possible to define a DEBUG flag. Both gcc and
+the java compiler will completly ignore the code if the debug flag is off,
+meaning there is no performance penalty. Another approach is to write to
+STDERR, which in java is defined as System.out, in C++ std::cerr and in C
+stderr, which can be utilized with fprintf().
 
 \subsubsection{Binary search the code}
 If the program is divided into specific parts, and the program has an error,
