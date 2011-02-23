@@ -180,6 +180,16 @@ confirm that it does what is expected from it.
 these boundary values, not only when a single variable in a state assume a
 boundary value.
 
+\subsection{Behavioural testing}
+
+Behavioural testing is a more general testing method than state-based testing.
+Instead of looking at states in code, behavioural testing focuses on the
+functionally of a chunk of code, ignoring the internal states. An example could
+be a breadth-first search, in behavioural testing we look at the result of the
+breadth-first search compared to program input, and not the internal states of
+each stage of the search. Behavioural testing is vital when developing
+graphical user interfaces, to make sure that internal states match what is
+displayed on the screen.
 
 \subsubsection{Program behaviour}
 
@@ -195,19 +205,6 @@ use. The copy-constructor is a good example of a place where unforeseen
 side-effects might arise. Such things should be tested, because even though
 those side-effects seem harmless, the program might crash once the side-effect
 arises in combination with another program functionality.
-
-
-\subsection{Behavioural testing}
-
-Behavioural testing is a more general testing method than state-based testing.
-Instead of looking at states in code, behavioural testing focuses on the
-functionally of a chunk of code, ignoring the internal states. An example could
-be a breadth-first search, in behavioural testing we look at the result of the
-breadth-first search compared to program input, and not the internal states of
-each stage of the search. Behavioural testing is vital when developing
-graphical user interfaces, to make sure that internal states match what is
-displayed on the screen.
-
 
 \subsection{Testing manually}
 
